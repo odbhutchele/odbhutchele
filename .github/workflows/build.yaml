@@ -1,5 +1,6 @@
 name: README build
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -34,7 +35,7 @@ jobs:
         run: |-
           git add .
           git diff
-          git config --global user.email "github-actions-bot@andrew6rant.github.io"
-          git config --global user.name "Andrew6rant/GitHub-Actions-Bot"
+          git config --global user.email "github-actions-bot@users.noreply.github.com"
+          git config --global user.name "odbhutchele/GitHub-Actions-Bot"
           git commit -m "Updated README" -a || echo "No changes to commit"
           git push
